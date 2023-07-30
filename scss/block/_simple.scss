@@ -1,0 +1,45 @@
+.simple {
+  padding: 150px 0 146px 0;
+  background-image: url("../../img/simple_background.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.simple_block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.simple_title {
+  @include title;
+  margin-bottom: 24px;
+}
+.simple_text {
+  max-width: 445px;
+  @include text;
+  color: $color3;
+  opacity: 1;
+}
+.simple_img__block {
+  max-width: 566px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1100px) {
+  .simple {
+    background-image: none;
+  }
+
+  .simple_block {
+    flex-direction: column-reverse;
+    text-align: center;
+    row-gap: 48px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .simple_title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}

@@ -1,0 +1,133 @@
+.work {
+  background-color: $color5;
+  background-image: url(../../img/work_background3.svg);
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+.work_block {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 0;
+}
+.work_title {
+  @include title;
+  font-family: "DM Serif Display";
+  color: $color2;
+  margin-bottom: 24px;
+}
+.work_text {
+  max-width: 445px;
+  @include text;
+  color: $color2;
+  margin-bottom: 32px;
+}
+.work_btn {
+  border: 1px solid $color2;
+  padding: 16px 32px 14px 32px;
+  @include link_text;
+  border-radius: 24px;
+}
+.work_background__block {
+  max-width: 536px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 39px;
+}
+.work_background__box:nth-child(1) .work_background::before {
+  @include work;
+  background-position: 0 -7px;
+}
+.work_background__box:nth-child(2) .work_background::before {
+  @include work;
+  background-position: -191px 0;
+}
+.work_background__box:nth-child(3) .work_background::before {
+  @include work;
+  background-position: -391px -3px;
+}
+.work_background__box:nth-child(4) .work_background::before {
+  @include work;
+  background-position: 0 -75px;
+}
+.work_background__box:nth-child(5) .work_background::before {
+  @include work;
+  background-position: -215px -70px;
+}
+.work_background__box:nth-child(6) .work_background::before {
+  @include work;
+  background-position: -391px -70px;
+}
+@media screen and (max-width: 1100px) {
+  .work_block {
+    flex-direction: column-reverse;
+    row-gap: 64px;
+    text-align: center;
+    padding: 88px 0;
+  }
+  .work_text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .work_background__block {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 800px) {
+  .work {
+    background-image: url(../../img/work_background4.svg);
+    background-position: top center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .work_block {
+    padding: 80px 0;
+    row-gap: 56px;
+  }
+  .work_title {
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 16px;
+  }
+  .work_background__block {
+    max-width: 450px;
+    width: 100%;
+    gap: 40px;
+  }
+  .work_text {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .work {
+    background-image: url(../../img/work_background5.svg);
+  }
+  .work_background__box:nth-child(1) .work_background::before {
+    @include work_media;
+    background-position: -2px -5px;
+  }
+  .work_background__box:nth-child(2) .work_background::before {
+    @include work_media;
+    background-position: -159px 0;
+  }
+  .work_background__box:nth-child(3) .work_background::before {
+    @include work_media;
+    background-position: 2px -62px;
+  }
+  .work_background__box:nth-child(4) .work_background::before {
+    @include work_media;
+    background-position: 120px -64px;
+  }
+  .work_background__box:nth-child(5) .work_background::before {
+    @include work_media;
+    background-position: -7px 27px;
+  }
+  .work_background__box:nth-child(6) .work_background::before {
+    @include work_media;
+    background-position: 129px 28px;
+  }
+}

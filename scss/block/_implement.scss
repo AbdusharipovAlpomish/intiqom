@@ -1,0 +1,48 @@
+.implement {
+  padding-top: 150px;
+}
+.implement_block {
+  max-width: 1015px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.implement_title {
+  @include title;
+  margin-bottom: 24px;
+}
+.implement_text {
+  max-width: 445px;
+  @include text;
+  color: $color3;
+}
+.implement_img {
+  border-radius: 8px;
+}
+@media screen and (max-width: 1000px) {
+  .implement {
+    padding-top: 100px;
+  }
+  .implement_block {
+    flex-direction: column;
+    text-align: center;
+  }
+  .implement_img__box {
+    margin-bottom: 48px;
+  }
+  .implement_text {
+    max-width: 1000px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .implement {
+    padding-top: 80px;
+  }
+  .implement_title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}

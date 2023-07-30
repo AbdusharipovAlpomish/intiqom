@@ -1,0 +1,138 @@
+.wrapper {
+  background-image: url("../../img/hero_background.svg");
+  background-repeat: no-repeat;
+  background-position: top 0 right 0;
+}
+.hero {
+  padding: 112px 0 75px 0;
+}
+.hero_block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero_title {
+  max-width: 546px;
+  font-family: "DM Serif Display";
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 72px;
+  letter-spacing: -0.55px;
+  color: $color1;
+  margin-bottom: 21px;
+}
+.hero_questions__box {
+  max-width: 445px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero_input__box {
+  width: 100%;
+}
+.hero_input {
+  width: 100%;
+  @include input;
+}
+.hero_input[placeholder] {
+  @include link_text;
+  opacity: 50%;
+}
+.hero_questions {
+  position: relative;
+}
+.hero_questions__box {
+  margin-bottom: 16px;
+}
+.hero_btn {
+  @include btn;
+  @include link_text;
+  display: block;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.hero_text {
+  @include link_text;
+  font-weight: 400;
+  color: $color3;
+  opacity: 1;
+}
+.hero_span {
+  font-weight: 700;
+}
+@media screen and (max-width: 1200px) {
+  .hero_block {
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+    gap: 48px;
+  }
+  .hero_title {
+    max-width: 800px;
+  }
+  .hero_questions {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 872px) {
+  .hero {
+    padding: 86px 0 100px 0;
+  }
+
+  .hero_title {
+    font-size: 48px;
+    line-height: 56px;
+    margin-bottom: 22px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrapper {
+    background-image: url("../../img/hero_background2.svg");
+    background-position: center top;
+  }
+}
+@media screen and (max-width: 550px) {
+  .hero {
+    padding: 60px 0 79px 0;
+  }
+  .hero_block {
+    gap: 24px;
+  }
+  .hero_questions__box {
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .hero_questions {
+    position: static;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero_title {
+    font-size: 32px;
+    line-height: 36px;
+    margin-bottom: 24px;
+  }
+
+  .hero_input__box {
+    width: 100%;
+    margin-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero_btn {
+    position: static;
+    padding: 16px 0 14px 0;
+    width: 100%;
+  }
+
+  .hero_questions__box {
+    margin-bottom: 24px;
+  }
+}
